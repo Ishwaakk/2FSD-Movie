@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineMatch - Home</title>
+    <title>CineMatch - Contact Us</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,18 +19,25 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Discover Your Next Favorite Movie!</h2>
-        <p>Explore the best movies and book your tickets with ease.</p>
-        <button onclick="exploreMovies()">Explore Movies</button>
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit_contact_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br>
+            <button type="submit">Send Message</button>
+        </form>
+        <h3>Our Office:</h3>
+        <p>Tavarekare Main Road, Banglore, India</p>
     </section>
     <footer>
         <p>&copy; 2024 CineMatch. All rights reserved.</p>
     </footer>
-    <script>
-        function exploreMovies() {
-            window.location.href = "movies.html";
-        }
-    </script>
 </body>
 </html>
