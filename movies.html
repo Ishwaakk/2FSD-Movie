@@ -5,6 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CineMatch - Movies</title>
 <link rel="stylesheet" href="styles.css">
+    <style>
+    .movie-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .movie-card {
+        background-color: #1f1f1f;
+        border: 2px solid #ff5722;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .movie-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .movie-card h3 {
+        margin: 10px 0;
+        color: #ff5722;
+    }
+
+    .movie-card p {
+        margin: 5px 0 15px;
+    }
+
+    .movie-card:hover {
+        transform: scale(1.05);
+    }
+</style>
 </head>
 <body>
 <header>
@@ -22,17 +60,17 @@
 <section class="movie-gallery">
     <h2>Now Showing</h2>
     <div class="movie-card">
-        <img src="movie1.jpg" alt="Movie 1">
+        <img src="images/movie1.png" alt="Movie 1">
         <h3>Movie Title 1</h3>
         <p>Release Date: 2024</p>
     </div>
     <div class="movie-card">
-        <img src="movie2.jpg" alt="Movie 2">
+        <img src="images/movie2.png" alt="Movie 2">
         <h3>Movie Title 2</h3>
         <p>Release Date: 2024</p>
     </div>
     <div class="movie-card">
-        <img src="movie3.jpg" alt="Movie 3">
+        <img src="images/movie3.png" alt="Movie 3">
         <h3>Movie Title 3</h3>
         <p>Release Date: 2024</p>
     </div>

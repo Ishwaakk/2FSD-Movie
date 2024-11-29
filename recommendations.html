@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineMatch - Recommendations</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .recommendation-form {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .recommendation-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1rem;
+        }
+        
+        .recommendation-form select,
+        .recommendation-form input {
+            width: 80%;
+            max-width: 300px;
+            padding: 8px;
+            margin: 10px 0;
+            border: 2px solid #ff5722;
+            border-radius: 5px;
+            background-color: #1f1f1f;
+            color: #ffffff;
+        }
+        
+        .recommendation-form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .recommendation-form button:hover {
+            transform: scale(1.1);
+        }
+        </style>        
 </head>
 <body>
     <header>
@@ -19,26 +58,28 @@
             </ul>
         </nav>
     </header>
-    <section class="recommendation-form">
-        <h2>Find Your Next Favorite Movie!</h2>
-        <form id="recommendation-form">
-            <label for="genre">Select Genre:</label>
-            <select id="genre" name="genre">
-                <option value="action">Action</option>
-                <option value="comedy">Comedy</option>
-                <option value="drama">Drama</option>
-                <option value="horror">Horror</option>
-            </select>
-            <br>
-            <label for="rating">Minimum Rating:</label>
-            <input type="number" id="rating" name="rating" min="1" max="10" step="0.1">
-            <br>
-            <button type="button" onclick="generateRecommendation()">Get Recommendations</button>
-        </form>
-        <div id="recommendation-result">
-            <!-- Recommendations will be displayed here -->
-        </div>
-    </section>
+    <div id="container">
+        <section class="recommendation-form">
+            <h2>Find Your Next Favorite Movie!</h2>
+            <form id="recommendation-form">
+                <label for="genre">Select Genre:</label>
+                <select id="genre" name="genre">
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                </select>
+                <br>
+                <label for="rating">Minimum Rating:</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" step="0.1">
+                <br>
+                <button type="button" onclick="generateRecommendation()">Get Recommendations</button>
+            </form>
+            <div id="recommendation-result">
+                <!-- Recommendations will be displayed here -->
+            </div>
+        </section>
+    </div>
     <footer>
         <p>&copy; 2024 CineMatch. All rights reserved.</p>
     </footer>
