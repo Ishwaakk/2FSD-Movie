@@ -46,18 +46,34 @@
 </style>
 </head>
 <body>
-<header>
-    <h1>CineMatch</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <div class="header-container">
+            <canvas id="logoCanvas" width="50" height="50"></canvas>
+            <h1>CineMatch</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const canvas = document.getElementById('logoCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#ff5722';
+        ctx.beginPath();
+        ctx.arc(25, 25, 20, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.font = '16px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('CM', 25, 25);
+    </script>
 <section class="movie-gallery">
     <h2>Now Showing</h2>
     <div class="movie-card">
