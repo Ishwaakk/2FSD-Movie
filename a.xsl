@@ -4,14 +4,58 @@
         <html>
             <head>
                 <title>CineMatch Movie List</title>
+                <link rel="stylesheet" type="text/css" href="styles.css"/>
                 <style>
-                    table { border-collapse: collapse; width: 60%; margin: 20px; }
-                    th, td { border: 1px solid black; padding: 10px; text-align: center; }
-                    th { background-color: #f2f2f2; }
+                    /* Movie Table Styling */
+                    table {
+                        border-collapse: collapse;
+                        width: 80%;
+                        margin: 30px auto;
+                        background-color: #1f1f1f;
+                        color: #ffffff;
+                        border: 2px solid #ff5722;
+                    }
+                    th, td {
+                        border: 1px solid #ff5722;
+                        padding: 12px;
+                        text-align: center;
+                    }
+                    th {
+                        background-color: #ff5722;
+                        color: #000;
+                        font-size: 1.2rem;
+                        text-shadow: 1px 1px 3px #000;
+                    }
+                    td {
+                        font-size: 1rem;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #222;
+                    }
+                    tr:hover {
+                        background-color: #ff5722;
+                        color: #000;
+                        transition: all 0.3s ease-in-out;
+                    }
                 </style>
             </head>
             <body>
-                <h2>Movies in CineMatch</h2>
+                <header>
+                    <div class="header-container">
+                        <h1>CineMatch Movie Listings</h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Movies</a></li>
+                            <li><a href="#">Bookings</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <h2 style="text-align: center; color: #ff5722; margin-top: 20px;">Movies Available in CineMatch</h2>
+
                 <table>
                     <tr>
                         <th>Title</th>
@@ -27,7 +71,7 @@
                             <td>
                                 <xsl:choose>
                                     <xsl:when test="rating &gt; 8.5">
-                                        <b><xsl:value-of select="rating"/></b>
+                                        <b style="color: #ff5722;"><xsl:value-of select="rating"/></b>
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:value-of select="rating"/>
@@ -42,6 +86,10 @@
                         </tr>
                     </xsl:for-each>
                 </table>
+
+                <footer>
+                    <p>&copy; 2025 CineMatch | All rights reserved.</p>
+                </footer>
             </body>
         </html>
     </xsl:template>
