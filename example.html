@@ -1,14 +1,61 @@
 <html>
    <head>
-      <title>CineMatch Movie List</title>
+      <title>CineMatch - Movie List</title>
       <style>
-                    table { border-collapse: collapse; width: 60%; margin: 20px; }
-                    th, td { border: 1px solid black; padding: 10px; text-align: center; }
-                    th { background-color: #f2f2f2; }
+                    body {
+                        font-family: 'Arial', sans-serif;
+                        background-color: #121212;
+                        color: #ffffff;
+                        margin: 0;
+                        padding: 0;
+                        line-height: 1.6;
+                    }
+                    header {
+                        background-color: #1f1f1f;
+                        padding: 15px 20px;
+                        border-bottom: 2px solid #ff5722;
+                        text-align: center;
+                    }
+                    header h1 {
+                        color: #ff5722;
+                        font-size: 2.5rem;
+                        text-shadow: 2px 2px 5px #000;
+                    }
+                    table {
+                        width: 80%;
+                        margin: 20px auto;
+                        border-collapse: collapse;
+                    }
+                    th, td {
+                        border: 2px solid #ff5722;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                    th {
+                        background-color: #ff5722;
+                        color: #000;
+                        font-size: 1.2rem;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #1f1f1f;
+                    }
+                    tr:nth-child(odd) {
+                        background-color: #333;
+                    }
+                    footer {
+                        background-color: #1f1f1f;
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 10px;
+                        border-top: 2px solid #ff5722;
+                        margin-top: 20px;
+                    }
                 </style>
    </head>
    <body>
-      <h2>Movies in CineMatch</h2>
+      <header>
+         <h1>CineMatch - Movie List</h1>
+      </header>
       <table>
          <tr>
             <th>Title</th>
@@ -17,29 +64,35 @@
             <th>Release Year</th>
          </tr>
          <tr>
-            <td>The Dark Knight</td>
-            <td>Action</td>
-            <td>
-               <b>9.0</b>
-            </td>
-            <td>2008</td>
-         </tr>
-         <tr>
             <td>Inception</td>
             <td>Science Fiction</td>
             <td>
-               <b>8.8</b>
+               <strong style="color:#00ff00;">8.8</strong>
             </td>
-            <td>2010</td>
+            <td>2010<span style="color:#ff5722;"> (New)</span>
+            </td>
          </tr>
          <tr>
             <td>Interstellar</td>
             <td>Science Fiction</td>
             <td>
-               <b>8.6</b>
+               <strong style="color:#00ff00;">8.6</strong>
             </td>
-            <td>2014</td>
+            <td>2014<span style="color:#ff5722;"> (New)</span>
+            </td>
+         </tr>
+         <tr>
+            <td>The Dark Knight</td>
+            <td>Action</td>
+            <td>
+               <strong style="color:#00ff00;">9.0</strong>
+            </td>
+            <td>2008<span style="color:#ff5722;"> (New)</span>
+            </td>
          </tr>
       </table>
+      <footer>
+         <p>© 2025 CineMatch | All rights reserved.</p>
+      </footer>
    </body>
 </html>

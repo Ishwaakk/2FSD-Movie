@@ -3,59 +3,62 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>CineMatch Movie List</title>
-                <link rel="stylesheet" type="text/css" href="styles.css"/>
+                <title>CineMatch - Movie List</title>
                 <style>
-                    /* Movie Table Styling */
-                    table {
-                        border-collapse: collapse;
-                        width: 80%;
-                        margin: 30px auto;
-                        background-color: #1f1f1f;
+                    body {
+                        font-family: 'Arial', sans-serif;
+                        background-color: #121212;
                         color: #ffffff;
-                        border: 2px solid #ff5722;
+                        margin: 0;
+                        padding: 0;
+                        line-height: 1.6;
+                    }
+                    header {
+                        background-color: #1f1f1f;
+                        padding: 15px 20px;
+                        border-bottom: 2px solid #ff5722;
+                        text-align: center;
+                    }
+                    header h1 {
+                        color: #ff5722;
+                        font-size: 2.5rem;
+                        text-shadow: 2px 2px 5px #000;
+                    }
+                    table {
+                        width: 80%;
+                        margin: 20px auto;
+                        border-collapse: collapse;
                     }
                     th, td {
-                        border: 1px solid #ff5722;
-                        padding: 12px;
+                        border: 2px solid #ff5722;
+                        padding: 10px;
                         text-align: center;
                     }
                     th {
                         background-color: #ff5722;
                         color: #000;
                         font-size: 1.2rem;
-                        text-shadow: 1px 1px 3px #000;
-                    }
-                    td {
-                        font-size: 1rem;
                     }
                     tr:nth-child(even) {
-                        background-color: #222;
+                        background-color: #1f1f1f;
                     }
-                    tr:hover {
-                        background-color: #ff5722;
-                        color: #000;
-                        transition: all 0.3s ease-in-out;
+                    tr:nth-child(odd) {
+                        background-color: #333;
+                    }
+                    footer {
+                        background-color: #1f1f1f;
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 10px;
+                        border-top: 2px solid #ff5722;
+                        margin-top: 20px;
                     }
                 </style>
             </head>
             <body>
                 <header>
-                    <div class="header-container">
-                        <h1>CineMatch Movie Listings</h1>
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Movies</a></li>
-                            <li><a href="#">Bookings</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
+                    <h1>CineMatch - Movie List</h1>
                 </header>
-
-                <h2 style="text-align: center; color: #ff5722; margin-top: 20px;">Movies Available in CineMatch</h2>
-
                 <table>
                     <tr>
                         <th>Title</th>
@@ -64,31 +67,31 @@
                         <th>Release Year</th>
                     </tr>
                     <xsl:for-each select="movies/movie">
-                        <xsl:sort select="rating" data-type="number" order="descending"/>
+                        <xsl:sort select="title"/>
                         <tr>
                             <td><xsl:value-of select="title"/></td>
                             <td><xsl:value-of select="genre"/></td>
                             <td>
                                 <xsl:choose>
-                                    <xsl:when test="rating &gt; 8.5">
-                                        <b style="color: #ff5722;"><xsl:value-of select="rating"/></b>
+                                    <xsl:when test="rating &gt;= 8.0">
+                                        <strong style="color:#00ff00;"><xsl:value-of select="rating"/></strong>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:value-of select="rating"/>
+                                        <span style="color:#ff0000;"><xsl:value-of select="rating"/></span>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </td>
                             <td>
-                                <xsl:if test="releaseYear &lt; 2015">
-                                    <xsl:value-of select="releaseYear"/>
+                                <xsl:value-of select="releaseYear"/>
+                                <xsl:if test="releaseYear &gt; 2000">
+                                    <span style="color:#ff5722;"> (New)</span>
                                 </xsl:if>
                             </td>
                         </tr>
                     </xsl:for-each>
                 </table>
-
                 <footer>
-                    <p>&copy; 2025 CineMatch | All rights reserved.</p>
+                    <p>&#169; 2025 CineMatch | All rights reserved.</p>
                 </footer>
             </body>
         </html>
