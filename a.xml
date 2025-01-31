@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="a.xsl" type="text/xsl"?>
+<!DOCTYPE movies [
+    <!ENTITY cinema "CineMatch">
+    <!ENTITY location "Bangalore">
+]>
+<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="movies.xsd">
+    <movie>
+        <title>Inception</title>
+        <genre>Science Fiction</genre>
+        <rating>8.8</rating>
+        <releaseYear>2010</releaseYear>
+    </movie>
+    <movie>
+        <title>Interstellar</title>
+        <genre>Science Fiction</genre>
+        <rating>8.6</rating>
+        <releaseYear>2014</releaseYear>
+    </movie>
+    <movie>
+        <title>The Dark Knight</title>
+        <genre>Action</genre>
+        <rating>9.0</rating>
+        <releaseYear>2008</releaseYear>
+    </movie>
+</movies>
