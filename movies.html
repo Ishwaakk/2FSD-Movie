@@ -43,6 +43,28 @@
     .movie-card:hover {
         transform: scale(1.05);
     }
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    button {
+        background-color: #ff5722;
+        color: #000;
+        border: 2px solid #ff5722;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background-color: #000;
+        color: #ff5722;
+    }
+
 </style>
 </head>
 <body>
@@ -93,6 +115,11 @@
     </div>
     <!-- Add more movie cards as needed -->
 </section>
+
+<div class="button-container">
+    <button onclick="window.location.href='rating.xml'">View Movie Ratings</button>
+</div>
+
 <footer>
     <p>&copy; 2024 CineMatch. All rights reserved.</p>
 </footer>
