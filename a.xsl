@@ -84,7 +84,6 @@
                             <td>
                                 <xsl:value-of select="releaseYear"/>
                                 <xsl:if test="releaseYear &gt; 2000">
-                                    <span style="color:#ff5722;"> (New)</span>
                                 </xsl:if>
                             </td>
                         </tr>

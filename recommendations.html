@@ -99,14 +99,38 @@
             const genre = document.getElementById('genre').value;
             const rating = document.getElementById('rating').value;
             const resultDiv = document.getElementById('recommendation-result');
-            resultDiv.innerHTML = `
-                <h3 class="mt-3">Recommended ${genre} Movies (Rating >= ${rating}):</h3>
-                <ul class="list-group">
-                    <li class="list-group-item bg-dark text-light">Kal Ho Naa Ho (Rating: 9.7)</li>
-                    <li class="list-group-item bg-dark text-light">Moana 2 (Rating: 7.2)</li>
-                    <li class="list-group-item bg-dark text-light">Singham Again (Rating: 6.7)</li>
-                </ul>
-            `;
+            if(rating<=6.7) {
+                resultDiv.innerHTML = `
+                    <h3 class="mt-3">Recommended ${genre} Movies (Rating >= ${rating}):</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-dark text-light">Kal Ho Naa Ho (Rating: 9.7)</li>
+                        <li class="list-group-item bg-dark text-light">Moana 2 (Rating: 7.2)</li>
+                        <li class="list-group-item bg-dark text-light">Singham Again (Rating: 6.7)</li>
+                    </ul>
+                `;
+            } else if (rating<=7.2) {
+                resultDiv.innerHTML = `
+                    <h3 class="mt-3">Recommended ${genre} Movies (Rating >= ${rating}):</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-dark text-light">Kal Ho Naa Ho (Rating: 9.7)</li>
+                        <li class="list-group-item bg-dark text-light">Moana 2 (Rating: 7.2)</li>
+                    </ul>
+                `;
+            } else if(rating<=9.7) {
+                resultDiv.innerHTML = `
+                    <h3 class="mt-3">Recommended ${genre} Movies (Rating >= ${rating}):</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-dark text-light">Kal Ho Naa Ho (Rating: 9.7)</li>
+                    </ul>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <h3 class="mt-3">Recommended ${genre} Movies (Rating >= ${rating}):</h3>
+                    <ul class="list-group">
+                        NOT MOVIE EVER EXISTED.
+                    </ul>
+                `;
+            }
         }
     </script>
 
