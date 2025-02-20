@@ -1,0 +1,9 @@
+{
+    "movies": [
+        { "title": "Kal Ho Naa Ho", "genre": "Romance", "rating": 9.7, "releaseYear": 2003 },
+        { "title": "Moana", "genre": "Animation", "rating": 7.2, "releaseYear": 2016 },
+        { "title": "Singham Again", "genre": "Action", "rating": 6.7, "releaseYear": 2024 },
+        { "title": "Chhaava", "genre": "Drama", "rating": 8.2, "releaseYear": 2025 },        
+        { "title": "Captain America: Brave New World", "genre": "Action", "rating": 6.1, "releaseYear": 2025 }
+    ]
+}
