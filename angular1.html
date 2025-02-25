@@ -87,7 +87,7 @@
     <!-- Movie List -->
     <ul>
         <li ng-repeat="movie in movies | filter:searchText">
-            <strong>{{ movie.title | uppercase }}</strong> - {{ movie.genre | lowercase }} (Rating: {{ movie.rating | number:1 }}, Ticket Price: ₹{{ movie.ticketPrice | number:2 }})
+            <strong>{{ movie.title | uppercase }}</strong> - {{ movie.genre | lowercase }} (Rating: {{ movie.rating | number:1 }}, Ticket Price: {{ movie.ticketPrice | currency }})
         </li>
     </ul>
 
