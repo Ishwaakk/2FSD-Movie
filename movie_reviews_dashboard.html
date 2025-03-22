@@ -35,6 +35,21 @@
             background-color: #000;
             color: #ff5722;
         }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #1f1f1f;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ff5722;
+            text-align: center;
+        }
+        th {
+            background-color: #ff5722;
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -46,5 +61,40 @@
         <button onclick="window.location.href='http://localhost:3000/reviews/sort?type=rating&order=desc'">Sort by Rating</button>
         <button onclick="window.location.href='http://localhost:3000/reviews/sort?type=releaseDate&order=asc'">Sort by Release Date</button>
     </div>
+
+    <h2>Movie Reviews</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Movie Name</th>
+                <th>Reviewer</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="reviewsTable"></tbody>
+    </table>
+
+    <script>
+        function fetchReviews() {
+            fetch("http://localhost:3000/reviews")
+                .then(response => response.json())
+                .then(data => {
+                    let tableContent = "";
+                    data.reviews.forEach(review => {
+                        tableContent += `
+                            <tr>
+                                <td>${review.id}</td>
+                                <td>${review.movie_name}</td>
+                                <td>${review.reviewer}</td>
+                                <td>${review.rating}</td>
+                            </tr>
+                        `;
+                    });
+                    document.getElementById("reviewsTable").innerHTML = tableContent;
+                });
+        }
+        fetchReviews();
+    </script>
 </body>
 </html>
