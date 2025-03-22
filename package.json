@@ -1,0 +1,12 @@
+{
+  "name": "2fsd-movie",
+  "version": "1.0.0",
+  "main": "node_file_operations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,29 @@
+{
+    "reviews": [
+      {
+        "movieID": 1,
+        "movieTitle": "Inception",
+        "reviewer": "John Doe",
+        "reviewText": "A mind-bending thriller with stunning visuals.",
+        "rating": 9.0,
+        "releaseDate": "2010-07-16"
+      },
+      {
+        "movieID": 2,
+        "movieTitle": "The Dark Knight",
+        "reviewer": "Alice Smith",
+        "reviewText": "Heath Ledger's Joker is legendary!",
+        "rating": 9.5,
+        "releaseDate": "2008-07-18"
+      },
+      {
+        "movieID": 3,
+        "movieTitle": "Interstellar",
+        "reviewer": "David Brown",
+        "reviewText": "An emotional sci-fi masterpiece.",
+        "rating": 8.8,
+        "releaseDate": "2014-11-07"
+      }
+    ]
+  }
+  
